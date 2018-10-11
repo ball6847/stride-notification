@@ -33,16 +33,11 @@ Options:
 ### Example
 
 ```sh
-
-
-# build your frontend app, let's say angular
-ng build --prod
-
 stride-notification \
-  --token <your token> \
-  --cloud-id <stride cloud id> \
-  --room-id <stride room id> \
-  --project "my awesome" \
+  --token "<your token>" \
+  --cloud-id "<stride cloud id>" \
+  --room-id "<stride room id>" \
+  --project "my-awesome-project" \
   --branch "master" \
   --ref "123" \
   --url "http://www.google.com/" \

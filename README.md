@@ -1,28 +1,33 @@
 # FTP Deploy
 
-[![Build Status](https://travis-ci.org/ball6847/ftp-deploy.svg?branch=master)](https://travis-ci.org/ball6847/ftp-deploy)
-[![npm version](https://img.shields.io/npm/v/@ball6847/ftp-deploy.svg?logo=npm)](https://www.npmjs.com/package/@ball6847/ftp-deploy)
-[![docker image](https://img.shields.io/docker/build/ball6847/ftp-deploy.svg?logo=docker)](https://hub.docker.com/r/ball6847/ftp-deploy/)
+[![Build Status](https://travis-ci.org/ball6847/stride-notification.svg?branch=master)](https://travis-ci.org/ball6847/stride-notification)
+[![npm version](https://img.shields.io/npm/v/@ball6847/stride-notification.svg?logo=npm)](https://www.npmjs.com/package/@ball6847/stride-notification)
+[![docker image](https://img.shields.io/docker/build/ball6847/stride-notification.svg?logo=docker)](https://hub.docker.com/r/ball6847/stride-notification/)
 
-Simple command-line interface for ftp-deploy
-
-This project is work-in-progress.
+Simple cli application for sending stride-notification, useful in CI environment
 
 ### Installation
 
 ```sh
-npm install -g @ball6847/ftp-deploy
+npm install -g @ball6847/stride-notification
 ```
 
 ### Usage
 
 ```sh
-Usage: ftp-deploy [options] <local> <remote>
+Usage: stride-notification [options]
 
 Options:
-
-  -V, --version  output the version number
-  -h, --help     output usage information
+  -V, --version         output the version number
+  --token <token>       stride app token
+  --cloud-id <cloudId>  stride cloud id
+  --room-id <roomId>    stride room id
+  --project <project>   name of project
+  --status <status>     job status, succcess or failure
+  --ref <ref>           job reference id
+  --url <url>           job url the developer can click to see detail about the job
+  --branch <branch>     git branch name
+  -h, --help            output usage information
 ```
 
 ### Example
@@ -33,21 +38,19 @@ Options:
 # build your frontend app, let's say angular
 ng build --prod
 
-# deploy content of dist directory to /var/www of remote ftp server
-ftp-deploy dist/ ftp://demo:demo@localhost:21/var/www
+stride-notification \
+  --token <your token> \
+  --cloud-id <stride cloud id> \
+  --room-id <stride room id> \
+  --project "my awesome" \
+  --branch "master" \
+  --ref "123" \
+  --url "http://www.google.com/" \
+  --status "success"
 
-# you can use ftps if needed
 ```
-
-**Warning**: above example will create remote directory if it does not exist, **remove any content inside** and upload all files to it
-
-### TODO
-
-- Add more helpful messages.
-- Add `--verbose` option.
-- Add `--clear-target-dir` option (make it safe by default).
 
 ### CREDITS
 
 - https://github.com/tj/commander.js/
-- https://github.com/patrickjuchli/basic-ftp
+- https://github.com/njl07/rx-http-request

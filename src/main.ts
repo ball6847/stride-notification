@@ -20,7 +20,7 @@ commander
   .option("--cloud-id <cloudId>", "stride cloud id")
   .option("--room-id <roomId>", "stride room id")
   .option("--project <project>", "name of project")
-  .option("--status <status>", "job status, succcess or failure", /^(success|failure)$/i)
+  .option("--status <status>", "job status, success or failure", /^(success|failure)$/i)
   .option("--ref <ref>", "job reference id")
   .option("--url <url>", "job url the developer can click to see detail about the job")
   .option("--branch <branch>", "git branch name")

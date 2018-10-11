@@ -23,7 +23,7 @@ Options:
   --cloud-id <cloudId>  stride cloud id
   --room-id <roomId>    stride room id
   --project <project>   name of project
-  --status <status>     job status, succcess or failure
+  --status <status>     job status, success or failure
   --ref <ref>           job reference id
   --url <url>           job url the developer can click to see detail about the job
   --branch <branch>     git branch name

@@ -1,6 +1,6 @@
 {
   "name": "@ball6847/stride-notification",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Simple command-line interface for stride notification, useful in CI",
   "author": "Porawit Poboonma",
   "main": "dist/main.js",

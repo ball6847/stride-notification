@@ -1,4 +1,4 @@
-# FTP Deploy
+# Stride Notification
 
 [![Build Status](https://travis-ci.org/ball6847/stride-notification.svg?branch=master)](https://travis-ci.org/ball6847/stride-notification)
 [![npm version](https://img.shields.io/npm/v/@ball6847/stride-notification.svg?logo=npm)](https://www.npmjs.com/package/@ball6847/stride-notification)
